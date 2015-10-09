@@ -41,29 +41,29 @@ output list.
 ## The Program
 { % include_tibasic 2013-09-28-tibasic-stat-lmode/LMODE.8Xp % }
 
-	Prompt LZMODE
-	SortA(LZMODE
-	0→C:0→M:LZMODE(1)→N
-	For(I,1,dim(LZMODE
-	If LZMODE(I)=N:Then
-	C+1→C
-	Else
-	If C>M:C→M
-	1→C
-	LZMODE(I)→N
-	End:End
-	"PASS 2
-	If M=1:Then
-	Disp "NO MODE"
-	Return:End
-	0→C:LZMODE(1)→N:1→D:{0}→LMODE
-	For(I,1,dim(LZMODE
-	If LZMODE(I)=N:Then
-	C+1→C
-	Else
-	If C=M:Then
-	N→LMODE(D):D+1→D:End
-	LZMODE(I)→N
-	1→C
-	End:End
-	"RETURN":LMODE
+<pre>Prompt <sub>L</sub>ZMODE
+SortA(<sub>L</sub>ZMODE
+0→C:0→M:<sub>L</sub>ZMODE(1)→N
+For(I,1,dim(<sub>L</sub>ZMODE
+If <sub>L</sub>ZMODE(I)=N:Then
+C+1→C
+Else
+If C&gt;M:C→M
+1→C
+<sub>L</sub>ZMODE(I)→N
+End:End
+"PASS 2
+If M=1:Then
+Disp "NO MODE"
+Return:End
+0→C:<sub>L</sub>ZMODE(1)→N:1→D:{0}→<sub>L</sub>MODE
+For(I,1,dim(<sub>L</sub>ZMODE
+If <sub>L</sub>ZMODE(I)=N:Then
+C+1→C
+Else
+If C=M:Then
+N→<sub>L</sub>MODE(D):D+1→D:End
+<sub>L</sub>ZMODE(I)→N
+1→C
+End:End
+"RETURN":<sub>L</sub>MODE</pre>
