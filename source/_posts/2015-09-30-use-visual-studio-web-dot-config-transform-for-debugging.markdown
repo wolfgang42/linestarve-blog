@@ -19,6 +19,7 @@ The solution to this is to implement the config transforms manually
 with a pre-build task and leave the debug transform out of version control,
 so each developer can have their own copy.
 <!-- more -->
+<!-- toc -->
 
 ## Setup
 

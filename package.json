@@ -16,6 +16,7 @@
     "hexo-renderer-marked": "^0.2.4",
     "hexo-server": "^0.1.2",
     "hexo-math": "~2.0.1",
+    "hexo-toc": "0.0.6",
     "hexo-generator-feed": "~1.0.3"
   }
 }
