@@ -101,21 +101,6 @@ The MSDN document [Web.config Transformation Syntax for Web Application Project 
 </configuration>
 ```
 
-```xml
-<?xml version="1.0"?>
-<!-- For more information on using web.config transformation visit http://go.microsoft.com/fwlink/?LinkId=125889 -->
-<configuration xmlns:xdt="http://schemas.microsoft.com/XML-Document-Transform">
-  <location xdt:Locator="Match(path)" path="cache"> <!-- XDT: Find the <location> element where path="cache"... -->
-    <system.webServer>
-      <staticContent>
-        <!-- ... and set the cacheControlMode attribute of <clientCache> to "DisableCache" -->
-        <clientCache xdt:Transform="SetAttributes(cacheControlMode)" cacheControlMode="DisableCache"/>
-      </staticContent>
-    </system.webServer>
-  </location>
-</configuration>
-```
-
 ### Disable cache
 ```xml
 <?xml version="1.0"?>
