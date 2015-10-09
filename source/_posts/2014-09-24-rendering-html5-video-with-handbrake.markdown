@@ -17,7 +17,7 @@ which will create a video that works (in combination with MediaElement.js) on mo
 looks good, and has a small size.
 I've tested it on Windows using Firefox, Google Chrome, and Internet Explorer, on Linux using Firefox, and
 on the iPad using Safari.
-If you don't want to enter all of these settings manually, you can download a [handbrake presets file](../../downloads/code/2014-09-24-rendering-html5-video-with-handbrake/HTML5_preset.plist) instead.
+If you don't want to enter all of these settings manually, you can download a {% asset_link HTML5_preset.plist handbrake presets file %} instead.
 
 <!-- more -->
 

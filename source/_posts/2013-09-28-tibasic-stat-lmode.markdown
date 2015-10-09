@@ -39,7 +39,7 @@ output list.
 </table>
 
 ## The Program
-{ % include_tibasic 2013-09-28-tibasic-stat-lmode/LMODE.8Xp % }
+Download: {% asset_link LMODE.8Xp %}
 
 <pre>Prompt <sub>L</sub>ZMODE
 SortA(<sub>L</sub>ZMODE

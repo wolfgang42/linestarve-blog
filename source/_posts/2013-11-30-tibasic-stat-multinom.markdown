@@ -49,7 +49,7 @@ $\sum\_{i=1}^k p\_i = 1$ and $\sum\_{i=1}^k x\_i = n$.
 </table>
 
 ## The Program
-{ % include_tibasic 2013-11-30-tibasic-stat-multinom/MULTINOM.8Xp % } 
+Download: {% asset_link MULTINOM.8Xp %} 
 
 	Prompt N
 	1→D:1→M:0→O:0→W:1→X
