@@ -68,6 +68,11 @@ archive_generator:
   monthly: false
   yearly: false
 
+feed:
+  type: atom
+  path: atom.xml
+  limit: 50
+
 # Extensions
 ## Plugins: http://hexo.io/plugins/
 ## Themes: http://hexo.io/themes/
