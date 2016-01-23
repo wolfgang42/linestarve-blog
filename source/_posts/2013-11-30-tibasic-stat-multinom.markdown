@@ -4,7 +4,7 @@ title: "Multinomial Probability Mass Function in TI-BASIC"
 date: 2013-11-30 18:40
 tags: ["TI-BASIC", "Algorithm", "Statistics"]
 ---
-
+<img src="{% asset_path MULTINOM.png %}" alt="" align="right"/>
 Another TI-BASIC challenge proposed to me by the same person who asked me
 [last time](/post/tibasic-stat-lmode) was to calculate the
 [probability mass function of a multinomial distribution](http://en.wikipedia.org/wiki/Multinomial_distribution#Probability_mass_function). The formula is:
@@ -38,14 +38,14 @@ This program also does some sanity checking to make sure that
 $\sum\_{i=1}^k p\_i = 1$ and $\sum\_{i=1}^k x\_i = n$.
 
 ## Variables used
-<table>
-	<tr><td>N</td><td>$n$</td></tr>
-	<tr><td>D</td><td>$denominator$ ($x_1 \cdots x_k$)</td></tr>
-	<tr><td>M</td><td>$multiplier$ ($p_1^{x_1}\cdots p_k^{x_k}$)</td></tr>
-	<tr><td>P</td><td>$p\_i$</td></tr>
-	<tr><td>O</td><td>$\sum_{i=1}^k p_i$</td></tr>
-	<tr><td>X</td><td>$x\_i$</td></tr>
-	<tr><td>W</td><td>$\sum_{i=1}^k x_i$</td></tr>
+<table class="table table-condensed">
+	<tr><td><code>N</code></td><td>$n$</td></tr>
+	<tr><td><code>D</code></td><td>$denominator$ ($x_1 \cdots x_k$)</td></tr>
+	<tr><td><code>M</code></td><td>$multiplier$ ($p_1^{x_1}\cdots p_k^{x_k}$)</td></tr>
+	<tr><td><code>P</code></td><td>$p\_i$</td></tr>
+	<tr><td><code>O</code></td><td>$\sum_{i=1}^k p_i$</td></tr>
+	<tr><td><code>X</code></td><td>$x\_i$</td></tr>
+	<tr><td><code>W</code></td><td>$\sum_{i=1}^k x_i$</td></tr>
 </table>
 
 ## The Program
@@ -68,3 +68,22 @@ Download: {% asset_link MULTINOM.8Xp %}
 	Disp "E: sum(X)≠N
 	Stop:End
 	((N!)/D)*M
+
+## Example
+> In a recent three-way election for a large country, candidate A received 20% of the votes, candidate B received 30% of the votes, and candidate C received 50% of the votes. If six voters are selected randomly, what is the probability that there will be exactly one supporter for candidate A, two supporters for candidate B and three supporters for candidate C in the sample?
+> (<a href="https://en.wikipedia.org/wiki/Multinomial_distribution#Example">source</a>)
+
+To find the solution using `prgmMULTINOM`:
+<table class="table table-compact">
+	<tr><td><code>N=?<kbd>6</kbd>  </td><td> Number of supporters (1+2+3)</td></tr>
+	<tr><td><code>X=?<kbd>1</kbd>  </td><td> Supporters for candidate A</td></tr>
+	<tr><td><code>P=?<kbd>.2</kbd> </td><td> Votes for candidate A</td></tr>
+	<tr><td><code>X=?<kbd>2</kbd>  </td><td> Supporters for candidate B</td></tr>
+	<tr><td><code>P=?<kbd>.3</kbd> </td><td> Votes for candidate B</td></tr>
+	<tr><td><code>X=?<kbd>3</kbd>  </td><td> Supporters for candidate C</td></tr>
+	<tr><td><code>P=?<kbd>.5</kbd> </td><td> Votes for candidate C</td></tr>
+	<tr><td><code>X=?<kbd>0</kbd>  </td><td> End of input</td></tr>
+	<tr><td><code>.135</td><td> Result</td></tr>
+</table>
+
+> Update December 2015: Added example of how to use the program, since I couldn't remember how myself.

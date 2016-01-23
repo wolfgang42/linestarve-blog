@@ -54,7 +54,7 @@ Next to the `.csproj` file for your project, create a `.wpp.targets` file with t
 For example, if your project file is `Website.csproj`, make a file called `Website.wpp.targets`.
 
 This file should have the following contents:
-```xml
+{% codeblock <var>Project</var>.wpp.targets lang:xml %}
 <?xml version="1.0" encoding="utf-8"?>
 <!-- You may find the following file helpful when editing this .wpp.targets file:
   C:\Program Files (x86)\MSBuild\Microsoft\VisualStudio\v10.0\Web\Microsoft.Web.Publishing.targets
@@ -78,7 +78,7 @@ This file should have the following contents:
     <Message Text="ExcludeFromPackageFiles: @(ExcludeFromPackageFiles)" Importance="high"/>
   </Target>
 </Project>
-```
+{% endcodeblock %}
 
 **Important Note:** Visual Studio *does not reload this file* when you change it; when you modify this file you will need to quit and restart Visual Studio.
 

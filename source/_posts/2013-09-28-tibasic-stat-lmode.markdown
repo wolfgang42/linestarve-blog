@@ -4,6 +4,7 @@ title: "Calculating the mode of a list in TI-BASIC"
 date: 2013-09-28 19:25
 tags: ["TI-BASIC", "Algorithm", "Statistics"]
 ---
+<img src="{% asset_path LMODE.png %}" alt="" align="right"/>
 Recently, someone challenged me to write a program to find the mode (or
 modes) of a list in TI-BASIC. I picked up my TI-83+ and whipped this program up
 in about half an hour. Somebody else asked me for a copy, so I figured I'd post
@@ -20,7 +21,7 @@ through the list a second time and moves all of the numbers of the mode into an
 output list.
 
 ## Variables used
-<table>
+<table class="table table-condensed">
 	<tr><td><code><sub>L</sub>ZMODE</code></td>
 	<td>Input list. Will be sorted in ascending order.</td></tr>
 	<tr><td><code><sub>L</sub>MODE</code></td>
@@ -52,6 +53,7 @@ If C&gt;M:C→M
 1→C
 <sub>L</sub>ZMODE(I)→N
 End:End
+If C&gt;M:C→M
 "PASS 2
 If M=1:Then
 Disp "NO MODE"
@@ -66,4 +68,11 @@ N→<sub>L</sub>MODE(D):D+1→D:End
 <sub>L</sub>ZMODE(I)→N
 1→C
 End:End
+If C=M:N→<sub>L</sub>MODE(D
 "RETURN":<sub>L</sub>MODE</pre>
+
+> Update December 2015: The original version of this program had a bug: if the largest number in the list was a mode of that list, it would not be included in the output.
+For example, if the list was `{4, 3, 4}` the program would output `NO MODE` instead of `{4}`.
+>
+> I discovered this problem right after I wrote this post, and simply worked around it thereafter.
+> However it's been bugging me ever since and I finally sat down and fixed it.
