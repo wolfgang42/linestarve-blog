@@ -2,6 +2,7 @@ RewriteEngine On
 RewriteBase /blog/
 
 # Redirects for old Octopress 2-based blog
+RewriteRule ^categories/$              /blog/tags/               [R=temporary]
 RewriteRule ^categories/algorithm/$    /blog/tags/Algorithm/     [R=temporary]
 RewriteRule ^categories/apache/$       /blog/tags/Apache-HTTPd/  [R=temporary]
 RewriteRule ^categories/asp-dot-net/$  /blog/tags/ASP-NET/       [R=temporary]
