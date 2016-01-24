@@ -4,7 +4,17 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta name="author" content="Wolfgang Faust">
-	<title><%- page.title %></title>
+	<title>
+		<% if (is_home()) { %>
+			linestarve.com blog
+		<% } else if (is_current('tags/', true)) { %>
+			Tags
+		<% } else if (is_tag()) { %>
+			Posts tagged &ldquo;<%- page.tag %>&rdquo;
+		<% } else { %>
+			<%- page.title %>
+		<% } %>
+	</title>
 
 	<%- css('css/style.css') %>
 	<!-- Custom Fonts -->
