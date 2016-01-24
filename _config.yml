@@ -78,7 +78,7 @@ feed:
 # Extensions
 ## Plugins: http://hexo.io/plugins/
 ## Themes: http://hexo.io/themes/
-theme: landscape
+theme: startbootstrap-clean-blog
 
 # Deployment
 ## Docs: http://hexo.io/docs/deployment.html

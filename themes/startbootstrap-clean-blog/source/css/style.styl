@@ -1,0 +1,129 @@
+article-padding = 20px
+font-size = 14px
+line-height = 1.6em
+
+@import "bootstrap.css"
+@import "clean-blog.css"
+@import "_partials/highlight"
+
+.intro-header .site-heading, .intro-header .post-heading, .intro-header .page-heading
+  color: black
+  hr.small
+    border-color: black
+
+.intro-header .post-heading .meta a
+  color: #337ab7
+
+blockquote>p:first-child
+  margin-top: 0 /* Otherwise there's a gigantic gap that looks really odd. */
+
+pre, code
+  font-family: "Source Code Pro", Consolas, Monaco, Menlo, Consolas, monospace
+
+code
+  color: inherit
+  background-color: inherit
+
+.code pre
+  border-top-left-radius: 0
+  border-bottom-left-radius: 0
+.gutter pre
+  border-top-right-radius: 0
+  border-bottom-right-radius: 0
+  border-right: none
+
+footer
+  padding: 0 0 25px
+
+a
+  color: #337ab7 !important
+a:visited
+  color: #b83396 !important
+/*#AD189F !important*/
+a.btn-default:hover
+  color: white !important
+a.btn-default:hover
+  background-color: #337ab7
+a.btn-default:visited:hover
+  background-color: #AD189F
+a .post-title
+  color: #404040
+
+.navbar
+  font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-size: 17px
+  font-weight: 700;
+  background-color: #808080
+  color: #e6e6e6 !important
+.navbar .navbar-brand
+  /*color: #404040 !important*/
+  font-size: 15px
+  color: #e6e6e6 !important
+.navbar a, .navbar a:visited
+  /*color: #3030bf !important*/
+  color: #e6e6e6 !important
+.navbar-right li span, .navbar-right li a
+  padding-bottom: 12px !important
+  border-bottom: 3px solid transparent
+.navbar-right li span
+  border-bottom: 3px solid white
+.navbar-right li a:hover
+  border-bottom: 3px solid #e6e6e6
+/*.navbar a:visited
+  color: #bf30a6 !important*/
+
+.tag-list-count:before
+  content: " ("
+.tag-list-count:after
+  content: ")"
+
+@media (min-width: 768px)
+  .navbar-nav > li > span
+    padding: 15px
+    line-height: 20px
+    position: relative;
+    display: block;
+
+.intro-header .site-heading, .intro-header .post-heading, .intro-header .page-heading
+  padding: 0
+.intro-header
+  margin-bottom: 0
+.meta
+  padding-top: .75em
+
+.navbar-brand
+  white-space: nowrap
+  overflow: hidden
+  text-overflow: ellipsis
+
+@media print {
+  a.tag-link[href]:after, footer a[href]:after { content: '' }
+}
+
+/* TODO Enable kerning: http://blog.typekit.com/2014/02/05/kerning-on-the-web/
+ * Not enabled yet because apparently it can cause issues with certain browsers.
+body
+  text-rendering: optimizeLegibility
+  font-kerning: normal
+  font-feature-settings: "kern"
+  -webkit-font-feature-settings: "kern"
+  -moz-font-feature-settings: "kern"
+  -moz-font-feature-settings: "kern=1"
+*/
+
+/* http://www.acusti.ca/blog/2014/11/28/towards-a-more-perfect-link-underline/
+   https://medium.com/designing-medium/crafting-link-underlines-on-medium-7c03a9274f9
+   http://codepen.io/ghepting/pen/tLnHK/?editors=110
+ */
+article a, .article-excerpt a {
+  text-decoration: none !important;
+  color: #337ab7;
+  position: relative;
+  text-shadow: -1px -1px 0 #fff, 1px -1px 0 #fff, -1px 1px 0 #fff, 1px 1px 0 #fff;
+  background-image: linear-gradient(to top, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0) 2px, #337ab7 2px, #337ab7 3px, rgba(0, 0, 0, 0) 3px);
+}
+@media (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi) {
+  article a, .article-excerpt a {
+    background-image: linear-gradient(to top, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0) 2px, #337ab7 2px, #337ab7 2.5px, rgba(0, 0, 0, 0) 2.5px);
+  }
+}
