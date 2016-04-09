@@ -1,3 +1,4 @@
+---
 title: Little did Microsoft know...
 date: 2015-12-30 21:25:39
 tags: ["Microsoft", "marketing"]
