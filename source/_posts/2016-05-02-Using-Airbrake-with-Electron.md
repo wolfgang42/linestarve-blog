@@ -4,8 +4,8 @@ date: 2016-05-02 15:20:00
 tags: ["Airbrake", "Electron", "NodeJS"]
 ---
 Just a quick tip on how to use [Airbrake] to report errors in an [Electron] renderer process.
-[Airbrake]: (https://airbrake.io/)
-[Electron]: (http://electron.atom.io/)
+[Airbrake]: https://airbrake.io/
+[Electron]: http://electron.atom.io/
 
 <!-- more -->
 
