@@ -1,0 +1,10 @@
+This post is a bit complex to create.
+All of the content is in python-3d-rendering.md.literate;
+this file is read by _generate.js to produce the output files.
+
+The generated files are:
+* The post itself
+* The contents of `figure/`
+* `buildshape.py`
+
+`buildshape.py` then outputs `shape.scad`, which is rendered into `shape.stl`.
