@@ -1,0 +1,32 @@
+{{ define "crumb_2" }}
+	&rsaquo;
+	<span itemscope itemtype="http://data-vocabulary.org/Breadcrumb">
+		<span itemprop="title">Tags</span>
+	</span>
+{{ end }}
+{{ define "main" }}
+{{ $data := .Data }}
+<div class="container">
+	<div class="row">
+		<div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+			Tags with more than one post:
+			<ul>
+				{{ range $key, $value := .Data.Terms }}
+				{{ if lt 1 (len $value.Pages) }}
+					<li class="f1">
+						<a href="{{ "/" | relLangURL }}{{ $.Data.Plural }}/{{ $key }}">{{ $key }}</a>
+						({{len $value.Pages}} posts)
+					</li>
+				{{ end }}
+				{{ end }}
+			</ul>
+			Tags with only one post:
+			{{ range $key, $value := .Data.Terms }}
+			{{ if eq 1 (len $value.Pages) }}
+					&bull; <a href="{{ "/" | relLangURL }}{{ $.Data.Plural | urlize }}/{{ $key | urlize }}">{{ $key }}</a>
+			{{ end }}
+			{{ end }}
+		</div>
+	</div>
+</div>
+{{ end }}

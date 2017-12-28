@@ -1,0 +1,20 @@
+{{ define "crumb_2" }}
+	&rsaquo;
+	<span itemscope itemtype="http://data-vocabulary.org/Breadcrumb">
+		<a href="/blog/tags/" itemprop="url"><span itemprop="title">Tags</span></a>
+	</span>
+	&rsaquo;
+	<span itemscope itemtype="http://data-vocabulary.org/Breadcrumb">
+		<span itemprop="title">{{.Title}}</span>
+	</span>
+{{ end }}
+{{ define "main" }}
+<div class="container">
+	<div class="row">
+		<div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+			{{ $section := .Data.Pages }}
+			{{ partial "posts-summaries.html" $section }}
+		</div>
+	</div>
+</div>
+{{ end }}

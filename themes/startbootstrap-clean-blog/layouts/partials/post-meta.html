@@ -1,0 +1,10 @@
+{{ $post := . }}
+<time datetime="{{ .Date.Format "2006-01-02T15:04:05Z" }}" itemprop="datePublished">
+	{{ $post.Date.Format "January 2, 2006" }}
+</time>
+{{ if $post.Params.tags }}
+	&bull;
+	{{ range $tagindex,$tag := $post.Params.tags }}
+		<a class="tag-link" href="/blog/tags/{{urlize $tag}}">{{$tag}}</a>{{if lt (add $tagindex 1) (len $post.Params.tags)}},{{end}}
+	{{ end }}
+{{ end }}

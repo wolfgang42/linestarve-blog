@@ -1,0 +1,6 @@
+name = "Startbootstrap Clean Blog"
+min_version = "0.31.1
+[original]
+  name = "Clean Blog"
+  homepage = "https://startbootstrap.com/template-overviews/clean-blog/"
+  repo = "https://github.com/blackrockdigital/startbootstrap-clean-blog"

@@ -1,0 +1,16 @@
+baseURL: "https://www.linestarve.com/blog/"
+title: linestarve.com/blog
+languageCode: en-us
+theme: startbootstrap-clean-blog
+
+pygmentsCodeFences: true
+# pygmentsUseClasses: true # TODO This requires updating static/css/_partials/highlight.styl
+pygmentsStyle: manni
+# TODO line numbers?
+
+disablePathToLower: true # TODO consider instead case folding redirects
+preserveTaxonomyNames: true
+permalinks:
+  posts: /post/:slug/
+taxonomies:
+  tag: tags
