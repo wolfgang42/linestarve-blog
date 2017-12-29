@@ -4,7 +4,3 @@ It's built using the [Hugo](https://gohugo.io/) static site generator.
 Running a local copy is easy:
 
     hugo server
-
-And, to build the site in `public/`:
-
-    hugo
