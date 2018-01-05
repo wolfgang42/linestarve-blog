@@ -14,3 +14,10 @@ permalinks:
   posts: /post/:slug/
 taxonomies:
   tag: tags
+
+outputFormats:
+  summary:
+    mediaType: text/html
+    baseName: summary
+outputs:
+  home: [HTML, RSS, summary]

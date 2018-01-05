@@ -1,0 +1,13 @@
+{{ range $i, $e := first 3 .Site.Pages }}
+    <div class="box content">
+        <h3><a href="{{.URL}}">{{.Title}}</a></h3>
+        {{ if .Params.short }}
+            {{.Content}}
+        {{ else }}
+            {{.Summary}}
+        {{ end }}
+        {{ if and .Truncated (not .Params.short) }}
+            <a href="{{.URL}}">Read more &raquo;</a>
+        {{ end }}
+    </div>
+{{ end }}
