@@ -25,7 +25,7 @@ I decided that this is the year I'll write it down. (Probably now that I've docu
 6. Click OK, then repeat steps 4 and 5. In step 5 enter
    <table class="table table-condensed">
       <tr><td>Name:</td><td><code>networktables</code></td></tr>
-      <tr><td>Path:</td><td>NetworkTables.jar</td></tr>
+      <tr><td>Path:</td><td>NetworkTables.jar<br>**Note for 2018:** NetworkTables.jar has been renamed to ntcore.jar</td></tr>
    </table>
 7. Click OK to all the dialog boxes you now have open.
 
