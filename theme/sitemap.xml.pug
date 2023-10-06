@@ -1,0 +1,18 @@
+doctype xml
+urlset(xmlns="http://www.sitemaps.org/schemas/sitemap/0.9")
+	url
+		loc=`https://www.linestarve.com/blog/`
+		lastmod=`${posts[0].date}T00:00:00+00:00`
+	for post in posts
+		url
+			loc=`https://www.linestarve.com/blog/post/${post.slug}/`
+			lastmod=`${post.date}T00:00:00+00:00`
+
+	url
+		loc=`https://www.linestarve.com/blog/tags/`
+		lastmod=`${posts[0].date}T00:00:00+00:00`
+	for posts, tag in posts_by_tag
+		url
+			loc=`https://www.linestarve.com/blog/tags/${urlize(tag)}/`
+			lastmod=`${posts[0].date}T00:00:00+00:00`
+			priority 0

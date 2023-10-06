@@ -1,0 +1,21 @@
+doctype xml
+rss(version='2.0' xmlns:atom="http://www.w3.org/2005/Atom")
+	channel
+		title linestarve.com/blog
+		link https://www.linestarve.com/blog/
+		description Recent content on linestarve.com/blog
+		language en-US
+		lastBuildDate=new Date().toUTCString()
+		atom:link(href="https://www.linestarve.com/blog/index.xml" rel="self" type="application/rss+xml")/
+		
+		for post of posts
+			item
+				title=post.title
+				link=`https://www.linestarve.com/blog/post/${post.slug}/`
+				pubDate=new Date(post.date).toUTCString()
+				guid=`https://www.linestarve.com/blog/post/${post.slug}/`
+				description
+					if post.short
+						=post.htmlBody
+					else
+						=post.htmlSummary

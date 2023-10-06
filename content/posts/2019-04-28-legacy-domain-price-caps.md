@@ -104,5 +104,3 @@ should return to its original intent as a group for coordinating
 operation of the Internet and representing the global user community.
 
 [1]: https://www.icann.org/resources/unthemed-pages/icann-mou-1998-11-25-en
-
-<!--more-->

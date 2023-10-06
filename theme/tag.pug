@@ -1,0 +1,37 @@
+extends ./_page.pug
+
+block title
+	=`Posts tagged ${tag}`
+
+block crumb_2
+	!=' &rsaquo; '
+	span(itemscope itemtype="http://data-vocabulary.org/Breadcrumb")
+		a(href="/blog/tags/" itemprop="url"): span(itemprop="title") Tags
+	!=' &rsaquo; '
+	span(itemscope itemtype="http://data-vocabulary.org/Breadcrumb")
+		span(itemprop="title")=tag
+
+block main
+	.container: .row: .col-lg-8.col-lg-offset-2.col-md-10.col-md-offset-1
+		for post in posts
+			.post-preview(style="clear: both")
+				a(href=`/blog/post/${post.slug}`)
+					h2.post-title=post.title
+				p.post-meta
+					//- TODO below should be fragment?
+					time(datetime=post.date itemprop="datePublished")=formatDate(post.date)
+					if post.tags.length
+						!=' &bull; '
+						for tag, i in post.tags
+							if i > 0
+								=', '
+							a.tag-link(href=`/blog/tags/${urlize(tag)}`)=tag
+				.article-excerpt
+					if post.short
+						!=post.htmlBody
+					else
+						!=post.htmlSummary
+				//- TODO this condition is mysterious
+				if !post.short
+					p.article-more-link
+						a.btn.btn-default(href=`/blog/post/${post.slug}`) Read more

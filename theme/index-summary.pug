@@ -1,0 +1,11 @@
+//- Used to generate content preview on linestarve.com homepage
+//- TODO this feels like a hack, and the site generator there should probably use the RSS feed instead
+for post in posts.slice(0, 3)
+	.box.content
+		h3: a(href=`/blog/post/${post.slug}`)=post.title
+		if post.short
+			!=post.htmlBody
+		else
+			!=post.htmlSummary
+		if !post.short
+			a(href=`/blog/post/${post.slug}`) Read more &raquo;

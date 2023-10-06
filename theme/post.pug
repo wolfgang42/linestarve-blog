@@ -1,0 +1,40 @@
+extends ./_page.pug
+
+block title
+	=post.title
+
+block crumb_2
+	!=' &rsaquo; '
+	span(itemscope itemtype="http://data-vocabulary.org/Breadcrumb")
+		a(href="/blog/post/" itemprop="url"): span(itemprop="title") Posts
+	!=' &rsaquo; '
+	span(itemscope itemtype="http://data-vocabulary.org/Breadcrumb")
+		span(itemprop="title")=post.title
+
+block main
+	header.intro-header: .container
+		.row: .col-lg-8.col-lg-offset-2.col-md-10.col-md-offset-1
+			.post-heading
+				h1=post.title
+				.meta
+					//- TODO below should be fragment?
+					time(datetime=post.date itemprop="datePublished")=formatDate(post.date)
+					if post.tags.length
+						!=' &bull; '
+						for tag, i in post.tags
+							if i > 0
+								=', '
+							a.tag-link(href=`/blog/tags/${urlize(tag)}`)=tag
+	//- TODO page.layout ?
+	//- article.article(id=`${page.layout}-${page.slug}` class=`article-type-${page.layout}` itemscope itemprop='blogPost')
+	article.article(itemscope itemprop='blogPost')
+		.container: .row: .col-lg-8.col-lg-offset-2.col-md-10.col-md-offset-1
+			!=post.htmlBody
+
+block footer
+	.row: .col-lg-8.col-lg-offset-2.col-md-10.col-md-offset-1.text-muted(style="font-size: 16px")
+		a(href=`https://github.com/wolfgang42/linestarve-blog/issues/new?title=Comment%20on%20“${encodeURIComponent(post.title)}”`) Add a comment
+		=' or '
+		a(href=`https://github.com/wolfgang42/linestarve-blog/edit/master/content/${post.filename}`) edit this post
+		=' on GitHub.'
+

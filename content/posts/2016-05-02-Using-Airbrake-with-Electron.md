@@ -3,9 +3,7 @@ title: "Using Airbrake with Electron"
 date: 2016-05-02
 tags: ["Airbrake", "Electron", "NodeJS"]
 ---
-Just a quick tip on how to use [Airbrake] to report errors in an [Electron] renderer process.
-[Airbrake]: https://airbrake.io/
-[Electron]: http://electron.atom.io/
+Just a quick tip on how to use [Airbrake](https://airbrake.io/) to report errors in an [Electron](http://electron.atom.io/) renderer process.
 
 <!--more-->
 

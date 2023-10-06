@@ -5,6 +5,7 @@ tags: ["TI-BASIC", "Algorithm", "Statistics"]
 slug: tibasic-stat-multinom
 ---
 <img src="/blog/post/tibasic-stat-multinom/MULTINOM.png" alt="" align="right"/>
+
 Another TI-BASIC challenge proposed to me by the same person who asked me
 [last time](/blog/post/tibasic-stat-lmode/) was to calculate the
 [probability mass function of a multinomial distribution](http://en.wikipedia.org/wiki/Multinomial_distribution#Probability_mass_function). The formula is:

@@ -1,6 +1,8 @@
 This is the source for [linestarve.com/blog/](http://www.linestarve.com/blog/).
-It's built using the [Hugo](https://gohugo.io/) static site generator.
 
-Running a local copy is easy:
-
-    hugo server
+To run a local copy:
+```sh
+yarn install
+yarn run watch
+python3 -m http.server --directory ./public/
+```

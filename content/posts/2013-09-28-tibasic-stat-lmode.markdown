@@ -5,6 +5,7 @@ tags: ["TI-BASIC", "Algorithm", "Statistics"]
 slug: tibasic-stat-lmode
 ---
 <img src="/blog/post/tibasic-stat-lmode/LMODE.png" alt="" align="right"/>
+
 Recently, someone challenged me to write a program to find the mode (or
 modes) of a list in TI-BASIC. I picked up my TI-83+ and whipped this program up
 in about half an hour. Somebody else asked me for a copy, so I figured I'd post

@@ -1,0 +1,26 @@
+extends ./_page.pug
+
+block title
+	| Tags
+
+block crumb_2
+	!=' &rsaquo; '
+	span(itemprop="title") Tags
+
+block main
+	- const tags = Object.entries(posts_by_tag)
+	- tags.sort((a, b) => a[0].toLowerCase() > b[0].toLowerCase() ? 1 : -1)
+	.container: .row: .col-lg-8.col-lg-offset-2.col-md-10.col-md-offset-1
+		p Tags with more than one post:
+		ul
+			for posts, tag in Object.fromEntries(tags)
+				if posts.length > 1
+					li
+						a(href=`/blog/tags/${urlize(tag)}/`)=tag
+						=` (${posts.length} posts)`
+		p
+			| Tags with only one post:
+			for posts, tag in Object.fromEntries(tags)
+				if posts.length === 1
+					!=' &bull; '
+					a(href=`/blog/tags/${urlize(tag)}/`)=tag
