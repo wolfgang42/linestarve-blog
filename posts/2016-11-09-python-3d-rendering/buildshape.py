@@ -2,9 +2,7 @@
 # This post was written as literate Python.
 # ---
 # title: Rendering a 3D shape with Python
-# date: 2016-11-09
 # tags: ["Python", "OpenSCAD", "3D Printing", "Algorithm"]
-# slug: python-3d-rendering
 # ---
 
 # A friend wanted to 3D-print a shape to demonstrate using calculus to find the volume of solids of known cross-section.

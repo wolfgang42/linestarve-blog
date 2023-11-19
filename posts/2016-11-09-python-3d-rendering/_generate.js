@@ -15,7 +15,7 @@ const
 let state = STATE_NORMAL
 
 const code = fs.createWriteStream('buildshape.py')
-const post = fs.createWriteStream('../../../content/posts/2016-11-09-python-3d-rendering.md')
+const post = fs.createWriteStream('./2016-11-09-python-3d-rendering.md')
 
 let tikz_current_block
 let code_current_block = ""
@@ -153,7 +153,7 @@ fs.readFileSync('python-3d-rendering.md.literate', {encoding: 'utf8'}).split('\n
 			const file = exportTikz(tikz_current_block)
 			// I'd love to use SVG, but the images come out *extremely* blurry on both Chrome and Firefox.
 			// pdftocairo does an excellent job of rendering sharp PNGs, though, so that's what we'll use.
-			post.write('\n<figure style="float:right;margin:30px 0"><img src="/blog/post/python-3d-rendering/'+file+'-1.png" alt="" srcset="'+file+'-2x-1.png 2x, '+file+'-3x-1.png 3x"/></figure>\n')
+			post.write('\n<figure style="float:right;margin:30px 0"><img src="/blog/post/python-3d-rendering/'+file+'-1.png" alt="" srcset="/blog/post/python-3d-rendering/'+file+'-2x-1.png 2x, /blog/post/python-3d-rendering/'+file+'-3x-1.png 3x"/></figure>\n')
 			
 			state = STATE_NORMAL
 		}
