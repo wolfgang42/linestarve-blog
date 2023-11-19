@@ -9,9 +9,7 @@ html {
   -webkit-text-size-adjust: 100%;
   -ms-text-size-adjust: 100%;
 }
-body {
-  margin: 0;
-}
+body {margin: 0}
 article, aside, details, figcaption, figure, footer, header, hgroup,
 main, menu, nav, section, summary {
   display: block;
@@ -20,21 +18,11 @@ audio, canvas, progress, video {
   display: inline-block;
   vertical-align: baseline;
 }
-a {
-  background-color: transparent;
-}
-a:active, a:hover {
-  outline: 0;
-}
-abbr[title] {
-  border-bottom: 1px dotted;
-}
-b, strong {
-  font-weight: bold;
-}
-dfn {
-  font-style: italic;
-}
+a {background-color: transparent}
+a:active, a:hover {outline: 0}
+abbr[title] {border-bottom: 1px dotted}
+b, strong {font-weight: bold}
+dfn {font-style: italic}
 h1 {
   margin: .67em 0;
   font-size: 2em;
@@ -43,39 +31,25 @@ mark {
   color: #000;
   background: #ff0;
 }
-small {
-  font-size: 80%;
-}
+small {font-size: 80%}
 sub, sup {
   position: relative;
   font-size: 75%;
   line-height: 0;
   vertical-align: baseline;
 }
-sup {
-  top: -.5em;
-}
-sub {
-  bottom: -.25em;
-}
-img {
-  border: 0;
-}
-svg:not(:root) {
-  overflow: hidden;
-}
-figure {
-  margin: 1em 40px;
-}
+sup {top: -.5em}
+sub {bottom: -.25em}
+img {border: 0}
+svg:not(:root) {overflow: hidden}
+figure {margin: 1em 40px}
 hr {
   height: 0;
   -webkit-box-sizing: content-box;
   -moz-box-sizing: content-box;
   box-sizing: content-box;
 }
-pre {
-  overflow: auto;
-}
+pre {overflow: auto}
 code, kbd, pre, samp {
   font-family: monospace, monospace;
   font-size: 1em;
@@ -85,27 +59,19 @@ button, input, optgroup, select, textarea {
   font: inherit;
   color: inherit;
 }
-button {
-  overflow: visible;
-}
-button, select {
-  text-transform: none;
-}
+button {overflow: visible}
+button, select {text-transform: none}
 button, html input[type="button"], input[type="reset"],
 input[type="submit"] {
   -webkit-appearance: button;
   cursor: pointer;
 }
-button[disabled], html input[disabled] {
-  cursor: default;
-}
+button[disabled], html input[disabled] {cursor: default}
 button::-moz-focus-inner, input::-moz-focus-inner {
   padding: 0;
   border: 0;
 }
-input {
-  line-height: normal;
-}
+input {line-height: normal}
 input[type="checkbox"], input[type="radio"] {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
@@ -135,19 +101,13 @@ legend {
   padding: 0;
   border: 0;
 }
-textarea {
-  overflow: auto;
-}
-optgroup {
-  font-weight: bold;
-}
+textarea {overflow: auto}
+optgroup {font-weight: bold}
 table {
   border-spacing: 0;
   border-collapse: collapse;
 }
-td, th {
-  padding: 0;
-}
+td, th {padding: 0}
 /*! Source: https://github.com/h5bp/html5-boilerplate/blob/master/src/css/main.css */
 @media print {
   *, *:before, *:after {
@@ -157,53 +117,27 @@ td, th {
     -webkit-box-shadow: none !important;
     box-shadow: none !important;
   }
-  a, a:visited {
-    text-decoration: underline;
-  }
-  a[href]:after {
-    content: " (" attr(href) ")";
-  }
-  abbr[title]:after {
-    content: " (" attr(title) ")";
-  }
-  a[href^="#"]:after, a[href^="javascript:"]:after {
-    content: "";
-  }
+  a, a:visited {text-decoration: underline}
+  a[href]:after {content: " (" attr(href) ")"}
+  abbr[title]:after {content: " (" attr(title) ")"}
+  a[href^="#"]:after, a[href^="javascript:"]:after {content: ""}
   pre, blockquote {
     border: 1px solid #999;
     page-break-inside: avoid;
   }
-  thead {
-    display: table-header-group;
-  }
-  tr, img {
-    page-break-inside: avoid;
-  }
-  img {
-    max-width: 100% !important;
-  }
+  thead {display: table-header-group}
+  tr, img {page-break-inside: avoid}
+  img {max-width: 100% !important}
   p, h2, h3 {
     orphans: 3;
     widows: 3;
   }
-  h2, h3 {
-    page-break-after: avoid;
-  }
-  select {
-    background: #fff !important;
-  }
-  .navbar {
-    display: none;
-  }
-  .table {
-    border-collapse: collapse !important;
-  }
-  .table td, .table th {
-    background-color: #fff !important;
-  }
-  .table-bordered th, .table-bordered td {
-    border: 1px solid #ddd !important;
-  }
+  h2, h3 {page-break-after: avoid}
+  select {background: #fff !important}
+  .navbar {display: none}
+  .table {border-collapse: collapse !important}
+  .table td, .table th {background-color: #fff !important}
+  .table-bordered th, .table-bordered td {border: 1px solid #ddd !important}
 }
 * {
   -webkit-box-sizing: border-box;
@@ -244,12 +178,8 @@ a:focus {
   outline: 5px auto -webkit-focus-ring-color;
   outline-offset: -2px;
 }
-figure {
-  margin: 0;
-}
-img {
-  vertical-align: middle;
-}
+figure {margin: 0}
+img {vertical-align: middle}
 hr {
   margin-top: 20px;
   margin-bottom: 20px;
@@ -289,37 +219,19 @@ h1, h2, h3 {
   margin-top: 20px;
   margin-bottom: 10px;
 }
-h1 small, h2 small, h3 small {
-  font-size: 65%;
-}
+h1 small, h2 small, h3 small {font-size: 65%}
 h4, h5, h6 {
   margin-top: 10px;
   margin-bottom: 10px;
 }
-h4 small, h5 small, h6 small {
-  font-size: 75%;
-}
-h1 {
-  font-size: 36px;
-}
-h2 {
-  font-size: 30px;
-}
-h3 {
-  font-size: 24px;
-}
-h4 {
-  font-size: 18px;
-}
-h5 {
-  font-size: 14px;
-}
-h6 {
-  font-size: 12px;
-}
-p {
-  margin: 0 0 10px;
-}
+h4 small, h5 small, h6 small {font-size: 75%}
+h1 {font-size: 36px}
+h2 {font-size: 30px}
+h3 {font-size: 24px}
+h4 {font-size: 18px}
+h5 {font-size: 14px}
+h6 {font-size: 12px}
+p {margin: 0 0 10px}
 .lead {
   margin-bottom: 20px;
   font-size: 16px;
@@ -327,13 +239,9 @@ p {
   line-height: 1.4;
 }
 @media (min-width: 768px) {
-  .lead {
-    font-size: 21px;
-  }
+  .lead {font-size: 21px}
 }
-small {
-  font-size: 85%;
-}
+small {font-size: 85%}
 mark {
   padding: .2em;
   background-color: #fcf8e3;
@@ -347,9 +255,7 @@ ul, ol {
   margin-top: 0;
   margin-bottom: 10px;
 }
-ul ul, ol ul, ul ol, ol ol {
-  margin-bottom: 0;
-}
+ul ul, ol ul, ul ol, ol ol {margin-bottom: 0}
 .list-unstyled {
   padding-left: 0;
   list-style: none;
@@ -368,15 +274,9 @@ dl {
   margin-top: 0;
   margin-bottom: 20px;
 }
-dt, dd {
-  line-height: 1.42857143;
-}
-dt {
-  font-weight: bold;
-}
-dd {
-  margin-left: 0;
-}
+dt, dd {line-height: 1.42857143}
+dt {font-weight: bold}
+dd {margin-left: 0}
 @media (min-width: 768px) {
   .dl-horizontal dt {
     float: left;
@@ -387,9 +287,7 @@ dd {
     text-overflow: ellipsis;
     white-space: nowrap;
   }
-  .dl-horizontal dd {
-    margin-left: 180px;
-  }
+  .dl-horizontal dd {margin-left: 180px}
 }
 abbr[title], abbr[data-original-title] {
   cursor: help;
@@ -415,9 +313,7 @@ blockquote footer, blockquote small {
   line-height: 1.42857143;
   color: #777;
 }
-blockquote footer:before, blockquote small:before {
-  content: '\2014 \00A0';
-}
+blockquote footer:before, blockquote small:before {content: '\2014 \00A0'}
 .blockquote-reverse, blockquote.pull-right {
   padding-right: 15px;
   padding-left: 0;
@@ -438,9 +334,7 @@ address {
   font-style: normal;
   line-height: 1.42857143;
 }
-code, kbd, pre, samp {
-  font-family: Menlo, Monaco, Consolas, "Courier New", monospace;
-}
+code, kbd, pre, samp {font-family: Menlo, Monaco, Consolas, "Courier New", monospace}
 code {
   padding: 2px 4px;
   font-size: 90%;
@@ -500,14 +394,10 @@ pre code {
   padding-left: 15px;
 }
 @media (min-width: 768px) {
-  .container {
-    width: 750px;
-  }
+  .container {width: 750px}
 }
 @media (min-width: 992px) {
-  .container {
-    width: 970px;
-  }
+  .container {width: 970px}
   .container-col {
     float: left;
     width: 83.33333333%;
@@ -515,27 +405,21 @@ pre code {
   }
 }
 @media (min-width: 1200px) {
-  .container {
-    width: 1170px;
-  }
+  .container {width: 1170px}
   .container-col {
     float: left;
     width: 66.66666667%;
     margin-left: 16.66666667%;
   }
 }
-table {
-  background-color: transparent;
-}
+table {background-color: transparent}
 caption {
   padding-top: 8px;
   padding-bottom: 8px;
   color: #777;
   text-align: left;
 }
-th {
-  text-align: left;
-}
+th {text-align: left}
 .table {
   width: 100%;
   max-width: 100%;
@@ -561,34 +445,22 @@ th {
 .table > thead:first-child > tr:first-child > td {
   border-top: 0;
 }
-.table > tbody + tbody {
-  border-top: 2px solid #ddd;
-}
-.table .table {
-  background-color: #fff;
-}
+.table > tbody + tbody {border-top: 2px solid #ddd}
+.table .table {background-color: #fff}
 .table-condensed > thead > tr > th, .table-condensed > tbody > tr > th,
 .table-condensed > tfoot > tr > th, .table-condensed > thead > tr > td,
 .table-condensed > tbody > tr > td, .table-condensed > tfoot > tr > td {
   padding: 5px;
 }
-.table-bordered {
-  border: 1px solid #ddd;
-}
+.table-bordered {border: 1px solid #ddd}
 .table-bordered > thead > tr > th, .table-bordered > tbody > tr > th,
 .table-bordered > tfoot > tr > th, .table-bordered > thead > tr > td,
 .table-bordered > tbody > tr > td, .table-bordered > tfoot > tr > td {
   border: 1px solid #ddd;
 }
-.table-bordered > thead > tr > th, .table-bordered > thead > tr > td {
-  border-bottom-width: 2px;
-}
-.table-striped > tbody > tr:nth-of-type(odd) {
-  background-color: #f9f9f9;
-}
-.table-hover > tbody > tr:hover {
-  background-color: #f5f5f5;
-}
+.table-bordered > thead > tr > th, .table-bordered > thead > tr > td {border-bottom-width: 2px}
+.table-striped > tbody > tr:nth-of-type(odd) {background-color: #f9f9f9}
+.table-hover > tbody > tr:hover {background-color: #f5f5f5}
 table col[class*="col-"] {
   position: static;
   display: table-column;
@@ -626,9 +498,7 @@ table td[class*="col-"], table th[class*="col-"] {
     -ms-overflow-style: -ms-autohiding-scrollbar;
     border: 1px solid #ddd;
   }
-  .table-responsive > .table {
-    margin-bottom: 0;
-  }
+  .table-responsive > .table {margin-bottom: 0}
   .table-responsive > .table > thead > tr > th,
   .table-responsive > .table > tbody > tr > th,
   .table-responsive > .table > tfoot > tr > th,
@@ -637,9 +507,7 @@ table td[class*="col-"], table th[class*="col-"] {
   .table-responsive > .table > tfoot > tr > td {
     white-space: nowrap;
   }
-  .table-responsive > .table-bordered {
-    border: 0;
-  }
+  .table-responsive > .table-bordered {border: 0}
   .table-responsive > .table-bordered > thead > tr > th:first-child,
   .table-responsive > .table-bordered > tbody > tr > th:first-child,
   .table-responsive > .table-bordered > tfoot > tr > th:first-child,
@@ -663,12 +531,8 @@ table td[class*="col-"], table th[class*="col-"] {
     border-bottom: 0;
   }
 }
-.tab-content > .tab-pane {
-  display: none;
-}
-.tab-content > .active {
-  display: block;
-}
+.tab-content > .tab-pane {display: none}
+.tab-content > .active {display: block}
 .navbar {
   position: relative;
   min-height: 50px;
@@ -692,9 +556,7 @@ table td[class*="col-"], table th[class*="col-"] {
   margin-right: auto;
   margin-left: auto;
 }
-a.thumbnail:hover, a.thumbnail:focus, a.thumbnail.active {
-  border-color: #337ab7;
-}
+a.thumbnail:hover, a.thumbnail:focus, a.thumbnail.active {border-color: #337ab7}
 .thumbnail .caption {
   padding: 9px;
   color: #333;
@@ -715,12 +577,8 @@ a.thumbnail:hover, a.thumbnail:focus, a.thumbnail.active {
   margin-right: auto;
   margin-left: auto;
 }
-.pull-right {
-  float: right !important;
-}
-.pull-left {
-  float: left !important;
-}
+.pull-right {float: right !important}
+.pull-left {float: left !important}
 /*# sourceMappingURL=bootstrap.css.map */
 /*!
  * Clean Blog v1.0.0 (http://startbootstrap.com)
@@ -736,22 +594,14 @@ p {
   line-height: 1.5;
   margin: 30px 0;
 }
-p a {
-  text-decoration: underline;
-}
+p a {text-decoration: underline}
 h1, h2, h3, h4, h5, h6 {
   font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
   font-weight: 800;
 }
-a {
-  color: #404040;
-}
-a:hover, a:focus {
-  color: #0085a1;
-}
-a img:hover, a img:focus {
-  cursor: zoom-in;
-}
+a {color: #404040}
+a:hover, a:focus {color: #0085a1}
+a img:hover, a img:focus {cursor: zoom-in}
 blockquote {
   color: #808080;
   font-style: italic;
@@ -761,13 +611,9 @@ blockquote {
   color: white;
 }
 @media only screen and (min-width: 768px) {
-  .intro-header .post-heading {
-    padding: 150px 0;
-  }
+  .intro-header .post-heading {padding: 150px 0}
 }
-.intro-header .post-heading h1 {
-  font-size: 35px;
-}
+.intro-header .post-heading h1 {font-size: 35px}
 .intro-header .post-heading .meta {
   line-height: 1.1;
   display: block;
@@ -778,17 +624,11 @@ blockquote {
   font-weight: 300;
   font-size: 20px;
 }
-.intro-header .post-heading .meta a {
-  color: white;
-}
+.intro-header .post-heading .meta a {color: white}
 @media only screen and (min-width: 768px) {
-  .intro-header .post-heading h1 {
-    font-size: 55px;
-  }
+  .intro-header .post-heading h1 {font-size: 55px}
 }
-.post-preview > a {
-  color: #404040;
-}
+.post-preview > a {color: #404040}
 .post-preview > a:hover, .post-preview > a:focus {
   text-decoration: none;
   color: #0085a1;
@@ -819,9 +659,7 @@ blockquote {
   text-decoration: underline;
 }
 @media only screen and (min-width: 768px) {
-  .post-preview > a > .post-title {
-    font-size: 36px;
-  }
+  .post-preview > a > .post-title {font-size: 36px}
 }
 .section-heading {
   font-size: 36px;
@@ -838,9 +676,7 @@ blockquote {
   border-bottom-right-radius: 5px;
   border-bottom-left-radius: 5px;
 }
-footer {
-  padding: 50px 0 65px;
-}
+footer {padding: 50px 0 65px}
 footer .list-inline {
   margin: 0;
   padding: 0;
@@ -873,22 +709,14 @@ img::-moz-selection {
   color: white;
   background: transparent;
 }
-body {
-  webkit-tap-highlight-color: #0085a1;
-}
-.intro-header .post-heading {
-  color: #000;
-}
-.intro-header .post-heading .meta a {
-  color: #337ab7;
-}
+body {webkit-tap-highlight-color: #0085a1}
+.intro-header .post-heading {color: #000}
+.intro-header .post-heading .meta a {color: #337ab7}
 blockquote>p:first-child {
   margin-top: 0;
   /* Otherwise there's a gigantic gap that looks really odd. */
 }
-pre, code {
-  font-family: "Source Code Pro", Consolas, Monaco, Menlo, Consolas, monospace;
-}
+pre, code {font-family: "Source Code Pro", Consolas, Monaco, Menlo, Consolas, monospace}
 code {
   color: inherit;
   background-color: inherit;
@@ -902,18 +730,10 @@ code {
   border-bottom-right-radius: 0;
   border-right: none;
 }
-footer {
-  padding: 0 0 25px;
-}
-a {
-  color: #337ab7 !important;
-}
-a:visited {
-  color: #b83396 !important;
-}
-a .post-title {
-  color: #404040;
-}
+footer {padding: 0 0 25px}
+a {color: #337ab7 !important}
+a:visited {color: #b83396 !important}
+a .post-title {color: #404040}
 .navbar {
   font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
   font-size: 17px;
@@ -932,21 +752,11 @@ a .post-title {
 }
 /*.navbar a:visited
   color: #bf30a6 !important*/
-.tag-list-count:before {
-  content: " (";
-}
-.tag-list-count:after {
-  content: ")";
-}
-.intro-header .post-heading {
-  padding: 0;
-}
-.intro-header {
-  margin-bottom: 0;
-}
-.meta {
-  padding-top: 0.75em;
-}
+.tag-list-count:before {content: " ("}
+.tag-list-count:after {content: ")"}
+.intro-header .post-heading {padding: 0}
+.intro-header {margin-bottom: 0}
+.meta {padding-top: 0.75em}
 .navbar {
   padding-left: 15px;
   padding-right: 15px;
@@ -955,9 +765,7 @@ a .post-title {
   text-overflow: ellipsis;
 }
 @media print {
-  a.tag-link[href]:after, footer a[href]:after {
-    content: '';
-  }
+  a.tag-link[href]:after, footer a[href]:after {content: ''}
 }
 /* TODO Enable kerning: http://blog.typekit.com/2014/02/05/kerning-on-the-web/
  * Not enabled yet because apparently it can cause issues with certain browsers.
@@ -981,9 +789,7 @@ article a, .article-excerpt a {
   background-image: linear-gradient(to top, rgba(0,0,0,0), rgba(0,0,0,0) 2px, #337ab7 2px, #337ab7 3px, rgba(0,0,0,0) 3px);
 }
 @media (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi) {
-  article a, .article-excerpt a {
-    background-image: linear-gradient(to top, rgba(0,0,0,0), rgba(0,0,0,0) 2px, #337ab7 2px, #337ab7 2.5px, rgba(0,0,0,0) 2.5px);
-  }
+  article a, .article-excerpt a {background-image: linear-gradient(to top, rgba(0,0,0,0), rgba(0,0,0,0) 2px, #337ab7 2px, #337ab7 2.5px, rgba(0,0,0,0) 2.5px)}
 }
 .article-more-link a {
   text-decoration: none;
