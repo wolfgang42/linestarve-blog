@@ -636,13 +636,9 @@ blockquote {
 	font-style: italic;
 	margin-top: 0;
 }
-.post-preview > .post-meta > a {
-	text-decoration: none;
-	color: #404040;
-}
+.post-preview > .post-meta > a {text-decoration: none}
 .post-preview > .post-meta > a:hover,
 .post-preview > .post-meta > a:focus {
-	color: #0085a1;
 	text-decoration: underline;
 }
 @media only screen and (min-width: 768px) {
