@@ -7,7 +7,7 @@ import pug from 'pug'
 const markdown = MarkdownIt({
 	html: true,
 })
-markdown.use(MarkdownItHighlightjs, {auto: false, code: false})
+markdown.use(MarkdownItHighlightjs, {auto: false, code: false, inline: true})
 
 const DATE_FORMATTER = new Intl.DateTimeFormat('en-US', {dateStyle: 'long'})
 const urlize = str => str.replaceAll(/ /g, '-').replaceAll(/[:'<>]/g, '')
