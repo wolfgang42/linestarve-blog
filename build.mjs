@@ -19,12 +19,31 @@ await fs.mkdir('./public/blog/post')
 await fs.cp('./themes/startbootstrap-clean-blog/static/', './public/blog/', {recursive: true})
 await fs.cp('./static/', './public/blog/', {recursive: true})
 
-const postdir = './content/posts'
+const postdir = './posts'
 const posts = await Promise.all((await fs.readdir(postdir))
-.filter(filename => ['.markdown', '.md', '.html'].some(ext => filename.endsWith(ext)))
 .map(async filename => {
 	try {
-		const lines = (await fs.readFile(`${postdir}/${filename}`, 'utf-8')).split('\n')
+		const filematch = filename.match(/^(?<date>[0-9]{4}-[0-9]{2}-[0-9]{2})-(?<slug>[^.]+)(?:\.(?<ext>html|md))?$/)
+		if (!filematch) throw new Error('failed to match on post name')
+		const {date, slug, ext} = filematch.groups
+		
+		await fs.mkdir(`public/blog/post/${slug}`, {recursive: true}) // NOTE: recursive only to suppress EEXIST
+		
+		let postfile = `${postdir}/${filename}`
+		if (ext === undefined) {
+			let found = false
+			for (const subfile of await fs.readdir(postfile)) {
+				if (subfile === `${date}-${slug}.md` || subfile === `${date}-${slug}.html`) {
+					if (found) throw new Error('Found multiple post files')
+					postfile += '/'+subfile
+					found = true
+				} else {
+					await fs.cp(`${postdir}/${filename}/${subfile}`, `public/blog/post/${slug}/${subfile}`, {recursive: true, preserveTimestamps: true})
+				}
+			}
+			if (!found) throw new Error('Failed to find post file')
+		}
+		const lines = (await fs.readFile(postfile, 'utf-8')).split('\n')
 		let mode = 'start', frontmatter_raw = '', body_truncated = '', body = ''
 		for (const line of lines) {
 			if (mode === 'start') {
@@ -54,14 +73,14 @@ const posts = await Promise.all((await fs.readdir(postdir))
 		
 		const frontmatter = Yaml.parse(frontmatter_raw)
 		if ((!frontmatter.short) !== (mode === 'body_truncated')) throw new Error('short flag does not match truncation')
-		if (!filename.startsWith(frontmatter.date+'-')) throw new Error('filename does not match date')
 		const post = {
-			slug: urlize(frontmatter.title), // default if frontmatter doesn't specify
+			slug,
+			date,
 			tags: [], // TODO ditto default
 			...frontmatter,
-			filename,
-			htmlBody: filename.endsWith('.html') ? body : markdown.render(body),
-			htmlSummary: filename.endsWith('.html') ? body_truncated : markdown.render(body_truncated),
+			filename: postfile,
+			htmlBody: (ext === 'html') ? body : markdown.render(body),
+			htmlSummary: (ext === 'html') ? body_truncated : markdown.render(body_truncated),
 		}
 		
 		return post
@@ -92,7 +111,6 @@ for (const post of posts) {
 		...templateGlobals,
 	})
 	
-	await fs.mkdir(`public/blog/post/${post.slug}`, {recursive: true}) // NOTE: recursive only to suppress EEXIST
 	await fs.writeFile(`public/blog/post/${post.slug}/index.html`, html)
 }
 
