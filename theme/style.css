@@ -34,14 +34,6 @@ video {
   display: inline-block;
   vertical-align: baseline;
 }
-audio:not([controls]) {
-  display: none;
-  height: 0;
-}
-[hidden],
-template {
-  display: none;
-}
 a {
   background-color: transparent;
 }
@@ -1019,53 +1011,6 @@ button.close {
 }
 .pull-left {
   float: left !important;
-}
-.hide {
-  display: none !important;
-}
-.show {
-  display: block !important;
-}
-.text-hide {
-  font: 0/0 a;
-  color: transparent;
-  text-shadow: none;
-  background-color: transparent;
-  border: 0;
-}
-.hidden {
-  display: none !important;
-}
-.affix {
-  position: fixed;
-}
-@-ms-viewport {
-  width: device-width;
-}
-@media (max-width: 767px) {
-  .hidden-xs {
-    display: none !important;
-  }
-}
-@media (min-width: 768px) and (max-width: 991px) {
-  .hidden-sm {
-    display: none !important;
-  }
-}
-@media (min-width: 992px) and (max-width: 1199px) {
-  .hidden-md {
-    display: none !important;
-  }
-}
-@media (min-width: 1200px) {
-  .hidden-lg {
-    display: none !important;
-  }
-}
-@media print {
-  .hidden-print {
-    display: none !important;
-  }
 }
 /*# sourceMappingURL=bootstrap.css.map */
 /*!
