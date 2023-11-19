@@ -117,8 +117,9 @@ const templateGlobals = {
 	formatDate: d => DATE_FORMATTER.format(new Date(d+'T00:00:00')),
 }
 
+const renderPost = pug.compileFile(`./theme/post.pug`)
 for (const post of posts) {
-	const html = pug.renderFile(`./theme/post.pug`, {
+	const html = renderPost({
 		post,
 		...templateGlobals,
 	})
@@ -130,8 +131,9 @@ for (const post of posts) {
 	}
 }
 
+const renderTag = pug.compileFile(`./theme/tag.pug`)
 for (const [tag, posts] of Object.entries(posts_by_tag)) {
-	const html = pug.renderFile(`./theme/tag.pug`, {
+	const html = renderTag({
 		tag,
 		posts,
 		...templateGlobals,
