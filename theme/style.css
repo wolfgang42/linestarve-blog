@@ -1257,16 +1257,6 @@ blockquote {
   color: #808080;
   font-style: italic;
 }
-.intro-header {
-  background-color: #808080;
-  background: no-repeat center center;
-  background-attachment: scroll;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  background-size: cover;
-  -o-background-size: cover;
-  margin-bottom: 50px;
-}
 .intro-header .post-heading {
   padding: 100px 0 50px;
   color: white;
@@ -1516,8 +1506,6 @@ a .post-title {
 .navbar {
   padding-left: 15px;
   padding-right: 15px;
-}
-.navbar {
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
