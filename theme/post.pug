@@ -6,7 +6,7 @@ block title
 block crumb_2
 	!=' &rsaquo; '
 	span(itemscope itemtype="http://data-vocabulary.org/Breadcrumb")
-		a(href="/blog/post/" itemprop="url"): span(itemprop="title") Posts
+		span(itemprop="title") Posts
 	!=' &rsaquo; '
 	span(itemscope itemtype="http://data-vocabulary.org/Breadcrumb")
 		span(itemprop="title")=post.title
@@ -35,6 +35,6 @@ block footer
 	.row: .col-lg-8.col-lg-offset-2.col-md-10.col-md-offset-1.text-muted(style="font-size: 16px")
 		a(href=`https://github.com/wolfgang42/linestarve-blog/issues/new?title=Comment%20on%20“${encodeURIComponent(post.title)}”`) Add a comment
 		=' or '
-		a(href=`https://github.com/wolfgang42/linestarve-blog/edit/master/content/${post.filename}`) edit this post
+		a(href=`https://github.com/wolfgang42/linestarve-blog/edit/master/${post.filename}`) edit this post
 		=' on GitHub.'
 
