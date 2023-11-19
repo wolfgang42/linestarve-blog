@@ -20,6 +20,7 @@ await fs.rm('./public', {force: true, recursive: true})
 await fs.mkdir('./public')
 await fs.mkdir('./public/blog')
 await fs.mkdir('./public/blog/post')
+await fs.mkdir('./public/blog/css')
 await fs.cp('./static/', './public/blog/', {recursive: true})
 await fs.link('./theme/style.css', './public/blog/css/style.css')
 
