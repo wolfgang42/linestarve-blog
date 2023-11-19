@@ -10,7 +10,7 @@ block crumb_2
 block main
 	- const tags = Object.entries(posts_by_tag)
 	- tags.sort((a, b) => a[0].toLowerCase() > b[0].toLowerCase() ? 1 : -1)
-	.container: .col-lg-8.col-lg-offset-2.col-md-10.col-md-offset-1
+	.container: .container-col
 		p Tags with more than one post:
 		ul
 			for posts, tag in Object.fromEntries(tags)

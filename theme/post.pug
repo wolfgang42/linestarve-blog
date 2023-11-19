@@ -12,7 +12,7 @@ block crumb_2
 		span(itemprop="title")=post.title
 
 block main
-	header.intro-header: .container: .col-lg-8.col-lg-offset-2.col-md-10.col-md-offset-1
+	header.intro-header: .container: .container-col
 		.post-heading
 			h1=post.title
 			.meta
@@ -27,7 +27,7 @@ block main
 	//- TODO page.layout ?
 	//- article.article(id=`${page.layout}-${page.slug}` class=`article-type-${page.layout}` itemscope itemprop='blogPost')
 	article.article(itemscope itemprop='blogPost')
-		.container: .col-lg-8.col-lg-offset-2.col-md-10.col-md-offset-1
+		.container: .container-col
 			!=post.htmlBody
 
 block footer
