@@ -1,7 +1,7 @@
 ---
 title: Little did Microsoft know...
 date: 2015-12-30
-tags: ["Microsoft", "marketing"]
+tags: ["Microsoft", "marketing", Humor]
 slug: Little-did-Microsoft-know
 short: true
 ---

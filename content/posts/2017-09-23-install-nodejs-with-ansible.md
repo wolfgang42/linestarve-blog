@@ -1,7 +1,7 @@
 ---
 title: How to install NodeJS on Debian/Ubuntu systems using Ansible
 date: 2017-09-23
-tags: ["NodeJS", "Ansible"]
+tags: ["NodeJS", "Ansible", Ubuntu]
 slug: install-nodejs-with-ansible
 short: true
 ---
