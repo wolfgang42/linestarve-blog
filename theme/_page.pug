@@ -37,15 +37,14 @@ html(lang='en')
 		link(href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css')
 		link(href='https://fonts.googleapis.com/css?family=Source+Code+Pro' rel='stylesheet' type='text/css')
 	body
-		nav.navbar.navbar-default: .container-fluid
-			.navbar-header.page-scroll.navbar-brand
+		nav.navbar
+			span(itemscope itemtype="http://data-vocabulary.org/Breadcrumb")
+				a(href="/" itemprop="url" rel="home"): span(itemprop="title") linestarve.com
+			!=' &rsaquo; '
+			block crumb_1
 				span(itemscope itemtype="http://data-vocabulary.org/Breadcrumb")
-					a(href="/" itemprop="url" rel="home"): span(itemprop="title") linestarve.com
-				!=' &rsaquo; '
-				block crumb_1
-					span(itemscope itemtype="http://data-vocabulary.org/Breadcrumb")
-						a(href="/blog/" itemprop="url"): span(itemprop="title") Blog
-				block crumb_2
+					a(href="/blog/" itemprop="url"): span(itemprop="title") Blog
+			block crumb_2
 		
 		block main
 		
