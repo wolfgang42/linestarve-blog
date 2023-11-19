@@ -611,6 +611,7 @@ a img:hover, a img:focus {cursor: zoom-in}
 @media only screen and (min-width: 768px) {
 	.intro-header .post-heading h1 {font-size: 55px}
 }
+.post-preview {margin-bottom: 64px}
 .post-preview > a {color: #404040}
 .post-preview > a:hover, .post-preview > a:focus {
 	text-decoration: none;
