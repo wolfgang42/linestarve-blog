@@ -5689,3 +5689,8 @@ article a,
     background-image: linear-gradient(to top, rgba(0,0,0,0), rgba(0,0,0,0) 2px, #337ab7 2px, #337ab7 2.5px, rgba(0,0,0,0) 2.5px);
   }
 }
+
+.article-more-link a {
+  text-decoration: none;
+  font-weight: bold;
+}

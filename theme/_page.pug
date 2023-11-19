@@ -16,10 +16,9 @@ mixin post-preview(post)
 				!=post.htmlBody
 			else
 				!=post.htmlSummary
-		//- TODO this condition is mysterious
 		if !post.short
 			p.article-more-link
-				a.btn.btn-default(href=`/blog/post/${post.slug}`) Read more
+				a(href=`/blog/post/${post.slug}`) Read more »
 
 doctype html
 html(lang='en')
