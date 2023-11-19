@@ -12,40 +12,24 @@ html {
 body {
   margin: 0;
 }
-article,
-aside,
-details,
-figcaption,
-figure,
-footer,
-header,
-hgroup,
-main,
-menu,
-nav,
-section,
-summary {
+article, aside, details, figcaption, figure, footer, header, hgroup,
+main, menu, nav, section, summary {
   display: block;
 }
-audio,
-canvas,
-progress,
-video {
+audio, canvas, progress, video {
   display: inline-block;
   vertical-align: baseline;
 }
 a {
   background-color: transparent;
 }
-a:active,
-a:hover {
+a:active, a:hover {
   outline: 0;
 }
 abbr[title] {
   border-bottom: 1px dotted;
 }
-b,
-strong {
+b, strong {
   font-weight: bold;
 }
 dfn {
@@ -62,8 +46,7 @@ mark {
 small {
   font-size: 80%;
 }
-sub,
-sup {
+sub, sup {
   position: relative;
   font-size: 75%;
   line-height: 0;
@@ -93,18 +76,11 @@ hr {
 pre {
   overflow: auto;
 }
-code,
-kbd,
-pre,
-samp {
+code, kbd, pre, samp {
   font-family: monospace, monospace;
   font-size: 1em;
 }
-button,
-input,
-optgroup,
-select,
-textarea {
+button, input, optgroup, select, textarea {
   margin: 0;
   font: inherit;
   color: inherit;
@@ -112,31 +88,25 @@ textarea {
 button {
   overflow: visible;
 }
-button,
-select {
+button, select {
   text-transform: none;
 }
-button,
-html input[type="button"],
-input[type="reset"],
+button, html input[type="button"], input[type="reset"],
 input[type="submit"] {
   -webkit-appearance: button;
   cursor: pointer;
 }
-button[disabled],
-html input[disabled] {
+button[disabled], html input[disabled] {
   cursor: default;
 }
-button::-moz-focus-inner,
-input::-moz-focus-inner {
+button::-moz-focus-inner, input::-moz-focus-inner {
   padding: 0;
   border: 0;
 }
 input {
   line-height: normal;
 }
-input[type="checkbox"],
-input[type="radio"] {
+input[type="checkbox"], input[type="radio"] {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
@@ -175,23 +145,19 @@ table {
   border-spacing: 0;
   border-collapse: collapse;
 }
-td,
-th {
+td, th {
   padding: 0;
 }
 /*! Source: https://github.com/h5bp/html5-boilerplate/blob/master/src/css/main.css */
 @media print {
-  *,
-  *:before,
-  *:after {
+  *, *:before, *:after {
     color: #000 !important;
     text-shadow: none !important;
     background: transparent !important;
     -webkit-box-shadow: none !important;
     box-shadow: none !important;
   }
-  a,
-  a:visited {
+  a, a:visited {
     text-decoration: underline;
   }
   a[href]:after {
@@ -200,33 +166,27 @@ th {
   abbr[title]:after {
     content: " (" attr(title) ")";
   }
-  a[href^="#"]:after,
-  a[href^="javascript:"]:after {
+  a[href^="#"]:after, a[href^="javascript:"]:after {
     content: "";
   }
-  pre,
-  blockquote {
+  pre, blockquote {
     border: 1px solid #999;
     page-break-inside: avoid;
   }
   thead {
     display: table-header-group;
   }
-  tr,
-  img {
+  tr, img {
     page-break-inside: avoid;
   }
   img {
     max-width: 100% !important;
   }
-  p,
-  h2,
-  h3 {
+  p, h2, h3 {
     orphans: 3;
     widows: 3;
   }
-  h2,
-  h3 {
+  h2, h3 {
     page-break-after: avoid;
   }
   select {
@@ -238,12 +198,10 @@ th {
   .table {
     border-collapse: collapse !important;
   }
-  .table td,
-  .table th {
+  .table td, .table th {
     background-color: #fff !important;
   }
-  .table-bordered th,
-  .table-bordered td {
+  .table-bordered th, .table-bordered td {
     border: 1px solid #ddd !important;
   }
 }
@@ -252,8 +210,7 @@ th {
   -moz-box-sizing: border-box;
   box-sizing: border-box;
 }
-*:before,
-*:after {
+*:before, *:after {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
@@ -269,10 +226,7 @@ body {
   color: #333;
   background-color: #fff;
 }
-input,
-button,
-select,
-textarea {
+input, button, select, textarea {
   font-family: inherit;
   font-size: inherit;
   line-height: inherit;
@@ -281,8 +235,7 @@ a {
   color: #337ab7;
   text-decoration: none;
 }
-a:hover,
-a:focus {
+a:hover, a:focus {
   color: #23527c;
   text-decoration: underline;
 }
@@ -313,8 +266,7 @@ hr {
   clip: rect(0, 0, 0, 0);
   border: 0;
 }
-.sr-only-focusable:active,
-.sr-only-focusable:focus {
+.sr-only-focusable:active, .sr-only-focusable:focus {
   position: static;
   width: auto;
   height: auto;
@@ -322,47 +274,29 @@ hr {
   overflow: visible;
   clip: auto;
 }
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
+h1, h2, h3, h4, h5, h6 {
   font-family: inherit;
   font-weight: 500;
   line-height: 1.1;
   color: inherit;
 }
-h1 small,
-h2 small,
-h3 small,
-h4 small,
-h5 small,
-h6 small {
+h1 small, h2 small, h3 small, h4 small, h5 small, h6 small {
   font-weight: normal;
   line-height: 1;
   color: #777;
 }
-h1,
-h2,
-h3 {
+h1, h2, h3 {
   margin-top: 20px;
   margin-bottom: 10px;
 }
-h1 small,
-h2 small,
-h3 small {
+h1 small, h2 small, h3 small {
   font-size: 65%;
 }
-h4,
-h5,
-h6 {
+h4, h5, h6 {
   margin-top: 10px;
   margin-bottom: 10px;
 }
-h4 small,
-h5 small,
-h6 small {
+h4 small, h5 small, h6 small {
   font-size: 75%;
 }
 h1 {
@@ -409,15 +343,11 @@ mark {
   margin: 40px 0 20px;
   border-bottom: 1px solid #eee;
 }
-ul,
-ol {
+ul, ol {
   margin-top: 0;
   margin-bottom: 10px;
 }
-ul ul,
-ol ul,
-ul ol,
-ol ol {
+ul ul, ol ul, ul ol, ol ol {
   margin-bottom: 0;
 }
 .list-unstyled {
@@ -438,8 +368,7 @@ dl {
   margin-top: 0;
   margin-bottom: 20px;
 }
-dt,
-dd {
+dt, dd {
   line-height: 1.42857143;
 }
 dt {
@@ -462,8 +391,7 @@ dd {
     margin-left: 180px;
   }
 }
-abbr[title],
-abbr[data-original-title] {
+abbr[title], abbr[data-original-title] {
   cursor: help;
   border-bottom: 1px dotted #777;
 }
@@ -477,40 +405,32 @@ blockquote {
   font-size: 17.5px;
   border-left: 5px solid #eee;
 }
-blockquote p:last-child,
-blockquote ul:last-child,
+blockquote p:last-child, blockquote ul:last-child,
 blockquote ol:last-child {
   margin-bottom: 0;
 }
-blockquote footer,
-blockquote small {
+blockquote footer, blockquote small {
   display: block;
   font-size: 80%;
   line-height: 1.42857143;
   color: #777;
 }
-blockquote footer:before,
-blockquote small:before {
+blockquote footer:before, blockquote small:before {
   content: '\2014 \00A0';
 }
-.blockquote-reverse,
-blockquote.pull-right {
+.blockquote-reverse, blockquote.pull-right {
   padding-right: 15px;
   padding-left: 0;
   text-align: right;
   border-right: 5px solid #eee;
   border-left: 0;
 }
-.blockquote-reverse footer:before,
-blockquote.pull-right footer:before,
-.blockquote-reverse small:before,
-blockquote.pull-right small:before {
+.blockquote-reverse footer:before, blockquote.pull-right footer:before,
+.blockquote-reverse small:before, blockquote.pull-right small:before {
   content: '';
 }
-.blockquote-reverse footer:after,
-blockquote.pull-right footer:after,
-.blockquote-reverse small:after,
-blockquote.pull-right small:after {
+.blockquote-reverse footer:after, blockquote.pull-right footer:after,
+.blockquote-reverse small:after, blockquote.pull-right small:after {
   content: '\00A0 \2014';
 }
 address {
@@ -518,10 +438,7 @@ address {
   font-style: normal;
   line-height: 1.42857143;
 }
-code,
-kbd,
-pre,
-samp {
+code, kbd, pre, samp {
   font-family: Menlo, Monaco, Consolas, "Courier New", monospace;
 }
 code {
@@ -624,12 +541,9 @@ th {
   max-width: 100%;
   margin-bottom: 20px;
 }
-.table > thead > tr > th,
-.table > tbody > tr > th,
-.table > tfoot > tr > th,
-.table > thead > tr > td,
-.table > tbody > tr > td,
-.table > tfoot > tr > td {
+.table > thead > tr > th, .table > tbody > tr > th,
+.table > tfoot > tr > th, .table > thead > tr > td,
+.table > tbody > tr > td, .table > tfoot > tr > td {
   padding: 8px;
   line-height: 1.42857143;
   vertical-align: top;
@@ -653,27 +567,20 @@ th {
 .table .table {
   background-color: #fff;
 }
-.table-condensed > thead > tr > th,
-.table-condensed > tbody > tr > th,
-.table-condensed > tfoot > tr > th,
-.table-condensed > thead > tr > td,
-.table-condensed > tbody > tr > td,
-.table-condensed > tfoot > tr > td {
+.table-condensed > thead > tr > th, .table-condensed > tbody > tr > th,
+.table-condensed > tfoot > tr > th, .table-condensed > thead > tr > td,
+.table-condensed > tbody > tr > td, .table-condensed > tfoot > tr > td {
   padding: 5px;
 }
 .table-bordered {
   border: 1px solid #ddd;
 }
-.table-bordered > thead > tr > th,
-.table-bordered > tbody > tr > th,
-.table-bordered > tfoot > tr > th,
-.table-bordered > thead > tr > td,
-.table-bordered > tbody > tr > td,
-.table-bordered > tfoot > tr > td {
+.table-bordered > thead > tr > th, .table-bordered > tbody > tr > th,
+.table-bordered > tfoot > tr > th, .table-bordered > thead > tr > td,
+.table-bordered > tbody > tr > td, .table-bordered > tfoot > tr > td {
   border: 1px solid #ddd;
 }
-.table-bordered > thead > tr > th,
-.table-bordered > thead > tr > td {
+.table-bordered > thead > tr > th, .table-bordered > thead > tr > td {
   border-bottom-width: 2px;
 }
 .table-striped > tbody > tr:nth-of-type(odd) {
@@ -687,24 +594,17 @@ table col[class*="col-"] {
   display: table-column;
   float: none;
 }
-table td[class*="col-"],
-table th[class*="col-"] {
+table td[class*="col-"], table th[class*="col-"] {
   position: static;
   display: table-cell;
   float: none;
 }
-.table > thead > tr > td.active,
-.table > tbody > tr > td.active,
-.table > tfoot > tr > td.active,
-.table > thead > tr > th.active,
-.table > tbody > tr > th.active,
-.table > tfoot > tr > th.active,
-.table > thead > tr.active > td,
-.table > tbody > tr.active > td,
-.table > tfoot > tr.active > td,
-.table > thead > tr.active > th,
-.table > tbody > tr.active > th,
-.table > tfoot > tr.active > th {
+.table > thead > tr > td.active, .table > tbody > tr > td.active,
+.table > tfoot > tr > td.active, .table > thead > tr > th.active,
+.table > tbody > tr > th.active, .table > tfoot > tr > th.active,
+.table > thead > tr.active > td, .table > tbody > tr.active > td,
+.table > tfoot > tr.active > td, .table > thead > tr.active > th,
+.table > tbody > tr.active > th, .table > tfoot > tr.active > th {
   background-color: #f5f5f5;
 }
 .table-hover > tbody > tr > td.active:hover,
@@ -788,36 +688,25 @@ table th[class*="col-"] {
   -o-transition: border .2s ease-in-out;
   transition: border .2s ease-in-out;
 }
-.thumbnail > img,
-.thumbnail a > img {
+.thumbnail > img, .thumbnail a > img {
   margin-right: auto;
   margin-left: auto;
 }
-a.thumbnail:hover,
-a.thumbnail:focus,
-a.thumbnail.active {
+a.thumbnail:hover, a.thumbnail:focus, a.thumbnail.active {
   border-color: #337ab7;
 }
 .thumbnail .caption {
   padding: 9px;
   color: #333;
 }
-.clearfix:before,
-.clearfix:after,
-.dl-horizontal dd:before,
-.dl-horizontal dd:after,
-.container:before,
-.container:after,
+.clearfix:before, .clearfix:after, .dl-horizontal dd:before,
+.dl-horizontal dd:after, .container:before, .container:after,
 .form-horizontal .form-group:before,
-.form-horizontal .form-group:after,
-.navbar:before,
-.navbar:after {
+.form-horizontal .form-group:after, .navbar:before, .navbar:after {
   display: table;
   content: " ";
 }
-.clearfix:after,
-.dl-horizontal dd:after,
-.container:after,
+.clearfix:after, .dl-horizontal dd:after, .container:after,
 .form-horizontal .form-group:after {
   clear: both;
 }
@@ -850,24 +739,17 @@ p {
 p a {
   text-decoration: underline;
 }
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
+h1, h2, h3, h4, h5, h6 {
   font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
   font-weight: 800;
 }
 a {
   color: #404040;
 }
-a:hover,
-a:focus {
+a:hover, a:focus {
   color: #0085a1;
 }
-a img:hover,
-a img:focus {
+a img:hover, a img:focus {
   cursor: zoom-in;
 }
 blockquote {
@@ -907,8 +789,7 @@ blockquote {
 .post-preview > a {
   color: #404040;
 }
-.post-preview > a:hover,
-.post-preview > a:focus {
+.post-preview > a:hover, .post-preview > a:focus {
   text-decoration: none;
   color: #0085a1;
 }
@@ -1005,8 +886,7 @@ blockquote>p:first-child {
   margin-top: 0;
   /* Otherwise there's a gigantic gap that looks really odd. */
 }
-pre,
-code {
+pre, code {
   font-family: "Source Code Pro", Consolas, Monaco, Menlo, Consolas, monospace;
 }
 code {
@@ -1046,8 +926,7 @@ a .post-title {
   font-size: 15px;
   color: #e6e6e6 !important;
 }
-.navbar a,
-.navbar a:visited {
+.navbar a, .navbar a:visited {
   /*color: #3030bf !important*/
   color: #e6e6e6 !important;
 }
@@ -1076,8 +955,7 @@ a .post-title {
   text-overflow: ellipsis;
 }
 @media print {
-  a.tag-link[href]:after,
-  footer a[href]:after {
+  a.tag-link[href]:after, footer a[href]:after {
     content: '';
   }
 }
@@ -1095,8 +973,7 @@ body
    https://medium.com/designing-medium/crafting-link-underlines-on-medium-7c03a9274f9
    http://codepen.io/ghepting/pen/tLnHK/?editors=110
  */
-article a,
-.article-excerpt a {
+article a, .article-excerpt a {
   text-decoration: none !important;
   color: #337ab7;
   position: relative;
@@ -1104,8 +981,7 @@ article a,
   background-image: linear-gradient(to top, rgba(0,0,0,0), rgba(0,0,0,0) 2px, #337ab7 2px, #337ab7 3px, rgba(0,0,0,0) 3px);
 }
 @media (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi) {
-  article a,
-  .article-excerpt a {
+  article a, .article-excerpt a {
     background-image: linear-gradient(to top, rgba(0,0,0,0), rgba(0,0,0,0) 2px, #337ab7 2px, #337ab7 2.5px, rgba(0,0,0,0) 2.5px);
   }
 }
