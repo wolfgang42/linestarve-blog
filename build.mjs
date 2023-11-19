@@ -21,8 +21,8 @@ await fs.mkdir('./public')
 await fs.mkdir('./public/blog')
 await fs.mkdir('./public/blog/post')
 await fs.mkdir('./public/blog/css')
-await fs.cp('./static/', './public/blog/', {recursive: true})
 await fs.link('./theme/style.css', './public/blog/css/style.css')
+await fs.link('./redirects.conf', './public/blog/redirects.conf')
 
 async function read_post_entry(filename) {
 	const filematch = filename.match(/^(?<date>[0-9]{4}-[0-9]{2}-[0-9]{2})-(?<slug>[^.]+)(?:\.(?<ext>html|md))?$/)
