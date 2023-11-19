@@ -965,16 +965,9 @@ blockquote {
 .intro-header .post-heading h1 {
   font-size: 35px;
 }
-.intro-header .post-heading .subheading,
 .intro-header .post-heading .meta {
   line-height: 1.1;
   display: block;
-}
-.intro-header .post-heading .subheading {
-  font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
-  font-size: 24px;
-  margin: 10px 0 30px;
-  font-weight: 600;
 }
 .intro-header .post-heading .meta {
   font-family: 'Lora', 'Times New Roman', serif;
@@ -988,9 +981,6 @@ blockquote {
 @media only screen and (min-width: 768px) {
   .intro-header .post-heading h1 {
     font-size: 55px;
-  }
-  .intro-header .post-heading .subheading {
-    font-size: 30px;
   }
 }
 .post-preview > a {
