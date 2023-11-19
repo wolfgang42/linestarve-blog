@@ -20,8 +20,9 @@ await fs.rm('./public', {force: true, recursive: true})
 await fs.mkdir('./public')
 await fs.mkdir('./public/blog')
 await fs.mkdir('./public/blog/post')
-await fs.cp('./themes/startbootstrap-clean-blog/static/', './public/blog/', {recursive: true})
+await fs.cp('./themes/startbootstrap-clean-blog/static/fonts', './public/blog/fonts', {recursive: true})
 await fs.cp('./static/', './public/blog/', {recursive: true})
+await fs.link('./theme/style.css', './public/blog/css/style.css')
 
 async function read_post_entry(filename) {
 	const filematch = filename.match(/^(?<date>[0-9]{4}-[0-9]{2}-[0-9]{2})-(?<slug>[^.]+)(?:\.(?<ext>html|md))?$/)
