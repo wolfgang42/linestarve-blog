@@ -429,9 +429,6 @@ mark,
 .text-capitalize {
   text-transform: capitalize;
 }
-.text-muted {
-  color: #777;
-}
 .page-header {
   padding-bottom: 9px;
   margin: 40px 0 20px;
@@ -1155,9 +1152,14 @@ footer .list-inline {
   padding: 0;
 }
 footer .copyright {
+  color: #777;
   font-size: 14px;
   text-align: center;
   margin-bottom: 0;
+}
+footer .post-footer {
+  color: #777;
+  font-size: 14px;
 }
 .floating-label-form-group {
   font-size: 14px;
