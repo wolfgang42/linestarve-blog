@@ -1,7 +1,7 @@
 {
   "dependencies": {
     "glob": "^7.1.2",
-    "hexo-util": "^0.6.2",
+    "hexo-util": "^3.1.0",
     "sha1": "^1.1.1",
     "starts-with": "^1.0.2"
   }

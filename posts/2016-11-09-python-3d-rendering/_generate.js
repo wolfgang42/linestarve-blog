@@ -137,6 +137,7 @@ fs.readFileSync('python-3d-rendering.md.literate', {encoding: 'utf8'}).split('\n
 					hexo_util.highlight(code_current_block.trim(), {
 						firstLine: codeblock_first_line,
 						lang: 'python',
+						hljs: true,
 					}) +
 					'\n'
 				)
