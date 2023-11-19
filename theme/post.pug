@@ -12,19 +12,18 @@ block crumb_2
 		span(itemprop="title")=post.title
 
 block main
-	header.intro-header: .container
-		.row: .col-lg-8.col-lg-offset-2.col-md-10.col-md-offset-1
-			.post-heading
-				h1=post.title
-				.meta
-					//- TODO below should be fragment?
-					time(datetime=post.date itemprop="datePublished")=formatDate(post.date)
-					if post.tags.length
-						!=' &bull; '
-						for tag, i in post.tags
-							if i > 0
-								=', '
-							a.tag-link(href=`/blog/tags/${urlize(tag)}`)=tag
+	header.intro-header: .container: .row: .col-lg-8.col-lg-offset-2.col-md-10.col-md-offset-1
+		.post-heading
+			h1=post.title
+			.meta
+				//- TODO below should be fragment?
+				time(datetime=post.date itemprop="datePublished")=formatDate(post.date)
+				if post.tags.length
+					!=' &bull; '
+					for tag, i in post.tags
+						if i > 0
+							=', '
+						a.tag-link(href=`/blog/tags/${urlize(tag)}`)=tag
 	//- TODO page.layout ?
 	//- article.article(id=`${page.layout}-${page.slug}` class=`article-type-${page.layout}` itemscope itemprop='blogPost')
 	article.article(itemscope itemprop='blogPost')
