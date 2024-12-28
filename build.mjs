@@ -61,21 +61,22 @@ async function parse_post(post) {
 		frontmatter_raw += line+'\n'
 	}
 	
-	let body_truncated = '', body = ''
-	while ((line = lines.shift()) !== undefined) {
-		if (line === '<!--more-->') break
-		body += line+'\n'
-		body_truncated += line+'\n'
-	}
-	body += '\n'
-	
-	let short = true
-	while ((line = lines.shift()) !== undefined) {
-		short = false
-		body += line+'\n'
+	let body_truncated = '', body = '', after_break = false
+	for (const line of lines) {
+		if (line === '<!--more-->') {
+			if (after_break) throw new Error('multiple breaks in post')
+			after_break = true
+			body += '\n'
+		} else {
+			body += line+'\n'
+			if (!after_break) body_truncated += line+'\n'
+		}
 	}
 	
-	const frontmatter = {...Yaml.parse(frontmatter_raw), short}
+	const frontmatter = {
+		...Yaml.parse(frontmatter_raw),
+		short: !after_break,
+	}
 	const render = RENDER_TYPE[post.filetype]
 	
 	return {
