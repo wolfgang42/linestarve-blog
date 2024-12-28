@@ -1,7 +1,6 @@
 ---
 title: "Apache, mod_ldap, and 500 errors"
 tags: ["Apache HTTPd", "mod_ldap"]
-short: true
 ---
 I just finished setting up an Apache server with LDAP authentication. I got everything set up and restarted Apache,
 but when I loaded a page it blew up with an Apache 500 Internal Server Error.

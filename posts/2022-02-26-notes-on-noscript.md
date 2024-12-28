@@ -2,7 +2,6 @@
 title: "Notes on <noscript>"
 tags: [HTML5]
 canonical: https://news.ycombinator.com/item?id=30474411
-short: true
 ---
 My experience has been that <code>&lt;noscript&gt;</code> is too unreliable to be usable: the problem is that a lot of users browsing “with JavaScript turned off” are actually browsing with it turned *on* but not executing (some arbitrary subset of!) the <code>&lt;script&gt;</code> tags on the page.
 

@@ -52,7 +52,7 @@ async function read_post_entry(filename) {
 
 async function parse_post(post) {
 	const lines = (await fs.readFile(post.filename, 'utf-8')).split('\n')
-	let mode = 'start', frontmatter_raw = '', body_truncated = '', body = ''
+	let mode = 'start', frontmatter_raw = '', body_truncated = '', body = '', short = true
 	for (const line of lines) {
 		if (mode === 'start') {
 			if (line !== '---') throw new Error('missing front matter start indicator')
@@ -72,6 +72,7 @@ async function parse_post(post) {
 				body_truncated += line+'\n'
 			}
 		} else if (mode === 'body_truncated') {
+			short = false
 			body += line+'\n'
 		} else {
 			throw new Error("can't happen")
@@ -79,8 +80,7 @@ async function parse_post(post) {
 	}
 	if (mode !== 'body' && mode !== 'body_truncated') throw new Error('failed to enter body mode')
 	
-	const frontmatter = Yaml.parse(frontmatter_raw)
-	if ((!frontmatter.short) !== (mode === 'body_truncated')) throw new Error('short flag does not match truncation')
+	const frontmatter = {...Yaml.parse(frontmatter_raw), short}
 	const render = RENDER_TYPE[post.filetype]
 	
 	return {

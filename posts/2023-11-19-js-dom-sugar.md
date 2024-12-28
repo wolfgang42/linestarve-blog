@@ -1,7 +1,6 @@
 ---
 title: "A bit of DOM sugar"
 tags: [JavaScript, DOM]
-short: true
 ---
 I’ve been carrying this snippet around in my head for years, embedding it in projects where I just need a tiny bit of JS:
 

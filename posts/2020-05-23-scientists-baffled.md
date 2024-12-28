@@ -2,7 +2,6 @@
 title: "“Scientists baffled”"
 tags: [Humor]
 canonical: https://news.ycombinator.com/item?id=23281001
-short: true
 ---
 > [Herd Of Fuzzy Green ‘Glacier Mice’ Baffles Scientists](https://www.npr.org/2020/05/22/858800112/herd-like-movement-of-fuzzy-green-glacier-mice-baffles-scientists)
 

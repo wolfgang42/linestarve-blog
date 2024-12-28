@@ -1,7 +1,6 @@
 ---
 title: "Gulp was devoured!"
 tags: ["NodeJS"]
-short: true
 ---
 If you get this message when you run `gulp`,
 you have installed [`devour`](https://www.npmjs.com/package/devour)

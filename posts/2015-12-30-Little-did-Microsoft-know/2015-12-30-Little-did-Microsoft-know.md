@@ -1,7 +1,6 @@
 ---
 title: Little did Microsoft know...
 tags: ["Microsoft", "marketing", Humor]
-short: true
 ---
 <img src="/blog/post/Little-did-Microsoft-know/five-herring.png" width="306" height="321" align="right" alt="(One penguin, to another) “I’ll trade you five herring for your Microsoft software.”"/>
 

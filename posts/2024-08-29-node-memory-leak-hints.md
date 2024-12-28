@@ -1,7 +1,6 @@
 ---
 title: "Hints for diagnosing memory leaks in NodeJS"
 tags: [NodeJS]
-short: true
 ---
 A couple of things I keep having to rediscover when diagnosing crashes in Node programs caused by running out of memory:
 

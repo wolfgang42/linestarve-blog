@@ -1,7 +1,6 @@
 ---
 title: How to install NodeJS on Debian/Ubuntu systems using Ansible
 tags: ["NodeJS", "Ansible", Ubuntu]
-short: true
 ---
 Since I've had to figure out how to do this twice now,
 and the NodeSource instructions make this more confusing than it ought to be.

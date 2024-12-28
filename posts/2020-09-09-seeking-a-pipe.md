@@ -2,7 +2,6 @@
 title: "Seeking on a UNIX pipe"
 tags: [UNIX, C]
 canonical: https://news.ycombinator.com/item?id=24421994
-short: true
 ---
 >> `tac` is `cat` spelled backwards it prints the contents in reverse order.
 >
