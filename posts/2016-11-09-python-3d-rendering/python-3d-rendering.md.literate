@@ -1,6 +1,6 @@
 ---
 title: Rendering a 3D shape with Python
-tags: ["Python", "OpenSCAD", "3D Printing", "Algorithm"]
+tags: ["Python", "OpenSCAD", "3D Printing", "Algorithm", "Literate programming"]
 ---
 \begin{tikzpicture}[xscale=1.5,yscale=1.5]
 \begin{axis}[domain=-.2:1.2]

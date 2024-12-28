@@ -1,6 +1,6 @@
 ---
 title: Rendering a 3D shape with Python
-tags: ["Python", "OpenSCAD", "3D Printing", "Algorithm"]
+tags: ["Python", "OpenSCAD", "3D Printing", "Algorithm", "Literate programming"]
 ---
 
 <figure style="float:right;margin:30px 0"><img src="/blog/post/python-3d-rendering/figure/2f3b6b2d2cdb460bb8169b306c99e216be3789dd-1.png" alt="" srcset="/blog/post/python-3d-rendering/figure/2f3b6b2d2cdb460bb8169b306c99e216be3789dd-2x-1.png 2x, /blog/post/python-3d-rendering/figure/2f3b6b2d2cdb460bb8169b306c99e216be3789dd-3x-1.png 3x"/></figure>
