@@ -2,7 +2,7 @@
 //- TODO this feels like a hack, and the site generator there should probably use the RSS feed instead
 for post in posts.slice(0, 3)
 	.box.content
-		h3: a(href=`/blog/post/${post.slug}`)=post.title
+		a(href=post.link): h3=post.title
 		if post.short
 			!=post.htmlBody
 		else
