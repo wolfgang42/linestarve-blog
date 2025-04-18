@@ -1,4 +1,5 @@
 import fs from 'node:fs/promises'
+import RssParser from 'rss-parser'
 import MarkdownIt from 'markdown-it'
 import MarkdownItHighlightjs from 'markdown-it-highlightjs'
 import Yaml from 'yaml'
@@ -91,6 +92,7 @@ async function parse_post(post) {
 
 const postdir = './posts'
 const posts = await Promise.all((await fs.readdir(postdir))
+.filter(filename => filename !== 'feep-blog.rss')
 .map(async filename => {
 	try {
 		return parse_post(await read_post_entry(filename))
@@ -99,6 +101,18 @@ const posts = await Promise.all((await fs.readdir(postdir))
 		throw e
 	}
 }))
+
+const feep_posts = await new RssParser().parseString(await fs.readFile('posts/feep-blog.rss', 'utf-8'))
+for (const item of feep_posts.items) {
+	posts.push({
+		title: item.title,
+		syndicated: 'search.feep.dev',
+		date: item.isoDate.split('T')[0],
+		link: new URL(item.link, 'https://search.feep.dev/blog/index.rss').toString(),
+		tags: [], // TODO
+		assets: [],
+	})
+}
 
 posts.sort((a, b) => a.date > b.date ? -1 : 1)
 const posts_by_tag = {}
@@ -117,6 +131,7 @@ const templateGlobals = {
 
 const renderPost = pug.compileFile(`./theme/post.pug`)
 for (const post of posts) {
+	if (post.syndicated) continue
 	const html = renderPost({
 		post,
 		...templateGlobals,

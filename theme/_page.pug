@@ -11,6 +11,9 @@ mixin post-preview(post)
 					if i > 0
 						=', '
 					a.tag-link(href=`/blog/tags/${urlize(tag)}`)=tag
+			if post.syndicated === 'search.feep.dev'
+				!=' &bull; '
+				a.tag-link(href='https://search.feep.dev/blog/') Feep! Search
 		.article-excerpt
 			if post.short
 				!=post.htmlBody
@@ -18,7 +21,11 @@ mixin post-preview(post)
 				!=post.htmlSummary
 		if !post.short
 			p.article-more-link
-				a(href=post.link) Read more »
+				a(href=post.link)
+					if post.syndicated
+						| Read on #{post.syndicated} »
+					else
+						| Read more »
 
 doctype html
 html(lang='en')

@@ -8,6 +8,10 @@ for post in posts.slice(0, 3)
 		else
 			!=post.htmlSummary
 		if !post.short
-			a(href=post.link) Read more »
+			a(href=post.link)
+				if post.syndicated
+					| Read on #{post.syndicated} »
+				else
+					| Read more »
 .box.content
 	a(href='/blog/'): h3(style='margin-bottom: 0') More posts »
