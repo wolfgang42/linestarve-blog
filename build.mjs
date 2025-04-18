@@ -81,6 +81,7 @@ async function parse_post(post) {
 	
 	return {
 		...post,
+		link: `/blog/post/${post.slug}/`,
 		tags: [], // TODO default in case frontmatter does not define
 		...frontmatter,
 		htmlBody: render(body),

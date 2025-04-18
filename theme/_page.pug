@@ -1,6 +1,6 @@
 mixin post-preview(post)
 	.post-preview(style="clear: both")
-		a(href=`/blog/post/${post.slug}`)
+		a(href=post.link)
 			h2.post-title=post.title
 		p.post-meta
 			//- TODO below should be fragment?
@@ -18,7 +18,7 @@ mixin post-preview(post)
 				!=post.htmlSummary
 		if !post.short
 			p.article-more-link
-				a(href=`/blog/post/${post.slug}`) Read more »
+				a(href=post.link) Read more »
 
 doctype html
 html(lang='en')

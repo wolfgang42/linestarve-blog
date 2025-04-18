@@ -11,9 +11,10 @@ rss(version='2.0' xmlns:atom="http://www.w3.org/2005/Atom")
 		for post of posts
 			item
 				title=post.title
-				link=`https://www.linestarve.com/blog/post/${post.slug}/`
+				- let link = new URL(post.link, 'https://www.linestarve.com/blog/post/').toString()
+				link=link
 				pubDate=new Date(post.date).toUTCString()
-				guid=`https://www.linestarve.com/blog/post/${post.slug}/`
+				guid=link
 				description
 					if post.short
 						=post.htmlBody
