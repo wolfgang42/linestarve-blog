@@ -9,3 +9,5 @@ for post in posts.slice(0, 3)
 			!=post.htmlSummary
 		if !post.short
 			a(href=`/blog/post/${post.slug}`) Read more &raquo;
+.box.content
+	a(href='/blog/'): h3(style='margin-bottom: 0') More posts »
